@@ -1,15 +1,17 @@
 import React from "react"
-import { Link } from "gatsby"
-
+import Headroom from "react-headroom"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import Header from "../components/header"
 
 const SecondPage = () => (
   <Layout>
+    <Headroom>
+        <Header disabled/>
+    </Headroom>
     <SEO title="Page two" />
-    <h1>Hi from the second page</h1>
+    <h1>Headroom Pinning is Disabled</h1>
     <p>Welcome to page 2</p>
-    <Link to="/">Go back to the homepage</Link>
   </Layout>
 )
 
