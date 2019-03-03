@@ -31,13 +31,14 @@ const Header = ({ siteTitle, subTitle }) => (
       </h1>
         {NavItems && (
           <ul style={{
-            listStyle: "none"
+            listStyle: "none",
           }}>
             {NavItems.map(item => (
               <li style={{
-                display: "inline-block"
+                display: "inline-block",
               }}>
-                <Link 
+                <Link
+                  activeClassName="active"
                   style={{
                     display: "block",
                     padding: "1rem",

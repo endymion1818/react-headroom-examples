@@ -333,7 +333,7 @@ hgroup {
   margin-bottom: 1.45rem;
 }
 ul {
-  margin-left: 1.45rem;
+  margin-left: 0;
   margin-right: 0;
   margin-top: 0;
   padding-bottom: 0;
@@ -510,6 +510,17 @@ th {
 }
 li {
   margin-bottom: calc(1.45rem / 2);
+}
+li > a {
+  text-decoration: none;
+}
+li > a:hover,
+li > a:focus,
+li > a:active {
+  background-color: rgba(0,0,0,0.4);
+}
+li > a.active {
+  background-color: rgba(255,255,255, 0.2);
 }
 ol li {
   padding-left: 0;
