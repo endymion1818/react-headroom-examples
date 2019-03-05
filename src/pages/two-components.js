@@ -10,11 +10,10 @@ const HeadroomWrapper = styled.div`
     top: 0;
     left: 0;
     right: 0;
-    zIndex: 1;
+    z-index: 2;
   }
   .headroom--unfixed {
     position: relative;
-    transform: translateY(0);
   }
   .headroom--scrolled {
     transition: transform 200ms ease-in-out;
@@ -25,7 +24,23 @@ const HeadroomWrapper = styled.div`
   }
   .headroom--pinned {
     position: fixed;
-    transform: translateY(0%);
+    transform: translateY(127%);
+  }
+  @media (min-width: 768px) {
+      .headroom--unfixed {
+          position: relative;
+          transform: translateY(-64px);
+      }
+      .headroom--unpinned {
+          position: fixed;
+          transform: translateY(-50%);
+      }
+      .headroom--pinned {
+          transform: translateY(11%);
+      }
+      .headroom--scrolled {
+          transform: translateY(200px);
+      }
   }
 `
 
